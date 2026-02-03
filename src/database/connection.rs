@@ -176,6 +176,8 @@ pub trait TransactionTrait {
 
     /// Execute SQL `BEGIN` transaction with isolation level and/or access mode.
     /// Returns a Transaction that can be committed or rolled back
+    /// Deprecated: use begin_with_options instead.
+    #[deprecated]
     async fn begin_with_config(
         &self,
         isolation_level: Option<IsolationLevel>,
